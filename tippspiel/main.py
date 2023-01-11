@@ -2,14 +2,14 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
-from Tippspiel.todo.datenbank import abspeichern, auslesen
+from tippspiel.datenbank import abspeichern, auslesen
 
 app = Flask("todo")
 
 @app.route("/")
 def start():
     todos = auslesen()
-    todos_html = todos.replace("\n", "<br>")
+    # todos.html = todos.replace("\n", "<br>")
     todo_liste = todos.split("\n")
     neue_liste = []
     for eintrag in todo_liste:

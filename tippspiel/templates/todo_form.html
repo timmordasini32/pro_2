@@ -6,8 +6,8 @@
 <form method="NAME">
     <div class="input-group mt-5 mb-5">
     <span class="input-group-text">Vor- und Nachname</span>
-    <input type="text" aria-label="Vorname" class="form-control">
-    <input type="text" aria-label="Nachname" class="form-control">
+    <input type="text" aria-label="Vorname" id="Vorname" class="form-control">
+    <input type="text" aria-label="Nachname" id= "Nachname" class="form-control">
   </div>
 </form>
 
@@ -21,9 +21,14 @@
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
     <div class="accordion-body">
         <div class="input-group">
-                <span class="input-group-text">Spiel1.1</span>
-                <input type="number" aria-label="Heim" class="form-control">
-                <input type="number" aria-label="Gast" class="form-control">
+                <span class="input-group-text">n_g1_s1_t1 vs. n_g1_s1_t2</span>
+                <input type="number" aria-label="Heim" id="p_g1_s1_t1" class="form-control">
+                <input type="number" aria-label="Gast" id="p_g1_s1_t2" class="form-control">
+        </div>
+        <div class="input-group">
+                <span class="input-group-text">n_g1_s2_t1 vs. n_g1_s2_t2</span>
+                <input type="number" aria-label="Heim" id="p_g1_s2_t1" class="form-control">
+                <input type="number" aria-label="Gast" id="p_g1_s2_t2" class="form-control">
         </div>
     </div>
     </div>
@@ -37,7 +42,7 @@
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="input-group">
-                <span class="input-group-text">Spiel2.1</span>
+                <span class="input-group-text">n_g2_s1_t1 vs. n_g2_s1_t2</span>
                 <input type="number" aria-label="Heim" class="form-control">
                 <input type="number" aria-label="Gast" class="form-control">
         </div>
