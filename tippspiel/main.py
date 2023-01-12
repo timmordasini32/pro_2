@@ -2,7 +2,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
-from tippspiel.datenbank import abspeichern, auslesen
+from datenbank import abspeichern, auslesen
 
 app = Flask("todo")
 
