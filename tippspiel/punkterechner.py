@@ -30,8 +30,3 @@ def punkte(resultat_spiel1_team1, resultat_spiel1_team2, player1_spiel1_team1, p
     else:
         return total_player1
 
-print(punkte(2,2,2,2))
-print(punkte(2,3,4,5))
-print(punkte(2,2,3,2))
-print(punkte('','','',''))
-

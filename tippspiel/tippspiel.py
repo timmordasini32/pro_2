@@ -13,9 +13,21 @@ wm2022 = {
 
 
 # Spielpaarungen 0,1 2,3 / 0,2 1,3 / 0,3 1,2
-spielplan = {}
+spiele_spieltag_1 = []
+spiele_spieltag_2 = []
+spiele_spieltag_3 = []
 
 for key, value in wm2022.items():
-    spielplan[f'spiele {key}'] = [[(value[0], value[1]), (value[2], value[3])], [(value[0], value[2]), (value[1], value[3])], [(value[0], value[3]), (value[1], value[2])]]
+    spiele_spieltag_1.append((value[0], value[1]))
+    spiele_spieltag_1.append((value[2], value[3]))
 
-print(spielplan)
+for key, value in wm2022.items():
+    spiele_spieltag_2.append((value[0], value[2]))
+    spiele_spieltag_2.append((value[1], value[3]))
+
+for key, value in wm2022.items():
+    spiele_spieltag_3.append((value[0], value[3]))
+    spiele_spieltag_3.append((value[1], value[2]))
+
+
+print(spiele_spieltag_1 + spiele_spieltag_2 + spiele_spieltag_3)
