@@ -1,4 +1,4 @@
-def punkte(resultat_spiel1_team1, resultat_spiel1_team2, player1_spiel1_team1, player1_spiel1_team2):
+def punkterechner(resultat_spiel1_team1, resultat_spiel1_team2, player1_spiel1_team1, player1_spiel1_team2):
     total_player1 = 0
     if player1_spiel1_team1 != 'Null' and player1_spiel1_team2 != 'Null':
         if resultat_spiel1_team1 > resultat_spiel1_team2:

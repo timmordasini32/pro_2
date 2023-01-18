@@ -3,68 +3,75 @@
 <body style="margin:50;padding:0">
 
 
-<form method="NAME">
+<form action="/add" method="POST">
     <div class="input-group mt-5 mb-5">
-    <span class="input-group-text">Vor- und Nachname</span>
-    <input type="text" aria-label="Vorname" id="Vorname" class="form-control">
-    <input type="text" aria-label="Nachname" id= "Nachname" class="form-control">
-  </div>
+        <span class="input-group-text">Vor- und Nachname</span>
+        <input type="text" name="Vorname" aria-label="Vorname" id="Vorname" class="form-control">
+        <input type="text" name="Nachname" aria-label="Nachname" id="Nachname" class="form-control">
+    </div>
+
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                    1. Spieltag
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                 data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {% for gruppe in spiele_spieltage[0] %}
+                    <div class="input-group">
+                        <span class="input-group-text" style="width: 500px;">{{gruppe[0]}} vs. {{gruppe[1]}}</span>
+                        <input type="number" aria-label="Heim" name="tag1_t1" class="form-control">
+                        <input type="number" aria-label="Gast" name="tag1_t2" class="form-control">
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    2. Spieltag
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                 data-bs-parent="#accordionExample">
+                {% for group in spiele_spieltage[1] %}
+                <div class="input-group">
+                    <span class="input-group-text" style="width: 500px;">{{gruppe[0]}} vs. {{gruppe[1]}}</span>
+                    <input type="number" aria-label="Heim" name="tag2_t1" class="form-control">
+                    <input type="number" aria-label="Gast" name="tag2_t2" class="form-control">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    3. Spieltag
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                 data-bs-parent="#accordionExample">
+                {% for group in spiele_spieltage[2] %}
+                <div class="input-group">
+                    <span class="input-group-text" style="width: 500px;">{{gruppe[0]}} vs. {{gruppe[1]}}</span>
+                    <input type="number" aria-label="Heim" name="tag3_t1" class="form-control">
+                    <input type="number" aria-label="Gast" name="tag3_t2" class="form-control">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Speichern</button>
+    </div>
 </form>
-
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        1. Spieltag
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-    <div class="accordion-body">
-        <div class="input-group">
-            html = '<ul>'
-                    for mannschaft_a, mannschaft_b in spielbegegnungen:
-            html += '<li>%s gegen %s</li>' % (mannschaft_a, mannschaft_b)
-                    html += '</ul>'
-        </div>
-        <div class="input-group">
-                <span class="input-group-text">n_g1_s2_t1 vs. n_g1_s2_t2</span>
-                <input type="number" aria-label="Heim" id="p_g1_s2_t1" class="form-control">
-                <input type="number" aria-label="Gast" id="p_g1_s2_t2" class="form-control">
-        </div>
-    </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        2. Spieltag
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <div class="input-group">
-                <span class="input-group-text">n_g2_s1_t1 vs. n_g2_s1_t2</span>
-                <input type="number" aria-label="Heim" class="form-control">
-                <input type="number" aria-label="Gast" class="form-control">
-        </div>
-    </div>
-  </div>
-  <div class="accordion-item mb-5">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        3. Spieltag
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-          <div class="input-group">
-                <span class="input-group-text">Spiel3.1</span>
-                <input type="number" aria-label="Heim" class="form-control">
-                <input type="number" aria-label="Gast" class="form-control">
-        </div>
-    </div>
-  </div>
-    <button type="submit" class="btn btn-primary">Speichern</button>
-</div>
-
 {% include "footer.jinja" %}
