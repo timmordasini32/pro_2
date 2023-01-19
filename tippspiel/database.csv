@@ -1,5 +1,10 @@
-test1,1111-11-11
-test2,2222-02-22
-test3,3333-03-31
-test3,3333-03-31
-fefe,0002-02-22
+Vorname,Nachname,Punkte,Wahrscheinlichkeit
+Punkte,Maximum,480,630
+Punkte,Minimum,0,0
+Tim,Mordasini,106,139.125
+Tim,Mordasini,106,139.125
+Tim,2,38,184.15384615384616
+Tim,2,38,184.15384615384616
+T,3,46,181.125
+T,5,30,[171.82]
+T,7,29,182.7

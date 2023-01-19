@@ -1,25 +1,27 @@
 {% include "header.jinja" %}
-{{ liste }}
-{% for eintrag in liste %}
-    <table class="table">
-  <thead>
+<br>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+    <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Punkte</th>
-      <th scope="col">Wahrscheinlichkeit</th>
+        <th style="text-align: center;" scope="col">#</th>
+        <th style="text-align: center;" scope="col">Vorname</th>
+        <th style="text-align: center;" scope="col">Nachname</th>
+        <th style="text-align: center;" scope="col">Punkte</th>
+        <th style="text-align: center;" scope="col">Wahrscheinlichkeit</th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
+    {% for eintrag in liste %}
     <tr>
-      <th scope="row">1</th>
-      <td>{{ eintrag[1] }}</td>
-      <td>{{ eintrag[0] }}</td>
-      <td>Prozent %</td>
+        <th style="text-align: center;" scope="row">{{ eintrag[0] }}</th>
+        <td style="text-align: center;">{{ eintrag[1] }}</td>
+        <td style="text-align: center;">{{ eintrag[2] }}</td>
+        <td style="text-align: center;">{{ eintrag[3] }}</td>
+        <td style="text-align: center;">Prozent %</td>
     </tr>
-
-  </tbody>
+    {% endfor %}
+    </tbody>
 </table>
 
-{% endfor %}
+
 {% include "footer.jinja" %}

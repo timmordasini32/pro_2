@@ -22,9 +22,9 @@
             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                  data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    {% for gruppe in spiele_spieltage[0] %}
+                    {% for group in spiele_spieltage[0] %}
                     <div class="input-group">
-                        <span class="input-group-text" style="width: 500px;">{{gruppe[0]}} vs. {{gruppe[1]}}</span>
+                        <span class="input-group-text" style="width: 500px;">{{group[0]}} vs. {{group[1]}}</span>
                         <input type="number" aria-label="Heim" name="tag1_t1" class="form-control">
                         <input type="number" aria-label="Gast" name="tag1_t2" class="form-control">
                     </div>
@@ -45,7 +45,7 @@
                  data-bs-parent="#accordionExample">
                 {% for group in spiele_spieltage[1] %}
                 <div class="input-group">
-                    <span class="input-group-text" style="width: 500px;">{{gruppe[0]}} vs. {{gruppe[1]}}</span>
+                    <span class="input-group-text" style="width: 500px;">{{group[0]}} vs. {{group[1]}}</span>
                     <input type="number" aria-label="Heim" name="tag2_t1" class="form-control">
                     <input type="number" aria-label="Gast" name="tag2_t2" class="form-control">
                 </div>
@@ -64,7 +64,7 @@
                  data-bs-parent="#accordionExample">
                 {% for group in spiele_spieltage[2] %}
                 <div class="input-group">
-                    <span class="input-group-text" style="width: 500px;">{{gruppe[0]}} vs. {{gruppe[1]}}</span>
+                    <span class="input-group-text" style="width: 500px;">{{group[0]}} vs. {{group[1]}}</span>
                     <input type="number" aria-label="Heim" name="tag3_t1" class="form-control">
                     <input type="number" aria-label="Gast" name="tag3_t2" class="form-control">
                 </div>
