@@ -50,7 +50,7 @@ def add_new_todo():
         tag3_t2_tipps = request.form.getlist('tag3_t2')
 
         getippte_spiele = 0
-
+        #Quelle *4*
         for tag1_t1_tipp, tag1_t2_tipp in zip(tag1_t1_tipps, tag1_t2_tipps):
             if tag1_t1_tipp != '' and tag1_t2_tipp != '':
                 getippte_spiele = getippte_spiele + 1
