@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import redirect
 from datenbank import to_csv
 import pandas as pd   # Quelle *1*
 from tippspiel2 import *
@@ -17,7 +18,7 @@ def home():
 @app.route("/")
 def start():
     df = pd.read_csv('database.csv')
-    print(df)
+    df = df.sort_values('Punkte', ascending=False)
     neue_liste = []
     sno = 1
     for index, row in df.iterrows():
@@ -93,7 +94,7 @@ def add_new_todo():
         punkteprognose = (63 * punktetotal) / getippte_spiele
         to_csv([str(vorname), str(nachname), punktetotal, round(punkteprognose, 2)])
 
-        return "hät funktioniert"
+        return redirect ('/')
 
 
 if __name__ == "__main__":
