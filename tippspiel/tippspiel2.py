@@ -1,4 +1,4 @@
-# Gruppen
+# Aufteilung aller Teams in den ausgelosten Gruppen. Die Daten basieren auf der Auslosung für die Weltmeisterschaft 2022. Es wird ein Dictionnary verwendet, damit die Daten anschliessend ausgelesen werden und damit die Erstellung für ein kommendes Turnier einfacher ist.
 
 wm2022 = {
     'Gruppe A': ["Katar", "Ecuador", "Senegal", "Niederlande"],
@@ -12,7 +12,8 @@ wm2022 = {
 }
 
 
-# Spielpaarungen 0,1 2,3 / 0,2 1,3 / 0,3 1,2
+# Die Spielpaarungen für die WM sind wiefolgt: Am ersten Spieltag spielt Mannschaft 0 gegen 1 und Mannschaft 2 gegen 3. 2. Spieltag: 0,2 1,3; 3. Spieltag: 0,3 1,2
+# Die Spiele wurden in verschiedene Spieltage eingeteilt, damit das UI der Webseite übersichtlicher wirkt.
 spiele_spieltag_1 = []
 spiele_spieltag_2 = []
 spiele_spieltag_3 = []
