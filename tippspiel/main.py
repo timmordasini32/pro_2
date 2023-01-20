@@ -68,8 +68,15 @@ def add_new_todo():
             if tag3_t1_tipp != '' and tag3_t2_tipp != '':
                 getippte_spiele = getippte_spiele + 1
 
+# Tipps auf int setzen und vermerken, dass leer gelassene Felder mit dem Wert "Null" gekennzeichnet werden.
+        tag1_t1_tipps = ['Null' if x == '' else int(x) for x in tag1_t1_tipps]
+        tag1_t2_tipps = ['Null' if x == '' else int(x) for x in tag1_t2_tipps]
+        tag2_t1_tipps = ['Null' if x == '' else int(x) for x in tag2_t1_tipps]
+        tag2_t2_tipps = ['Null' if x == '' else int(x) for x in tag2_t2_tipps]
+        tag3_t1_tipps = ['Null' if x == '' else int(x) for x in tag3_t1_tipps]
+        tag3_t2_tipps = ['Null' if x == '' else int(x) for x in tag3_t2_tipps]
 
-# Diese Liste zeigt die effektiven Spielresultate der WM2022 an. Sie ist gleich aufgebaut, die Tippliste. Somit können die einzelnen Values miteinander verglichen werden (siehe Formel Punktetotal, Zeile 81).
+# Diese Liste zeigt die effektiven Spielresultate der WM2022 an. Sie ist gleich aufgebaut, die Tippliste. Somit können die einzelnen tipps miteinander verglichen werden (siehe Formel Punktetotal, Zeile 81).
         tag1_t1_resultat = [0, 0, 6, 1, 1, 0, 4, 0, 7, 1, 1, 0, 2, 1, 3, 0]
         tag1_t2_resultat = [2, 2, 2, 1, 2, 0, 1, 0, 0, 2, 0, 0, 0, 0, 2, 0]
         tag2_t1_resultat = [1, 1, 0, 2, 2, 0, 2, 1, 1, 1, 0, 1, 1, 3, 2, 3]

@@ -16,3 +16,12 @@ Die Tipps können lediglich am Ende des Turniers abgegeben werden, da die effekt
 * Aktualisierung der Rangliste
 * Berechnung der Wahrscheinlichkeit, dass der Nutzer das Turnier am Ende gewinnen wird.
 ***
+## Mögliche Erweiterungen
+### Ergebnisseite
+Die erste Erweiterung wäre eine Resultate-Seite, bei der angezeigt wird, wie viele Punkte man mit welchem Tipp erhalten kann. So kann jeder Nutzer die Tipps einsehen und erfährt wo er Punkte verloren hat.
+### Login
+Momentan muss der Nutzer einmalig tippen und kann danach keine Änderungen vornehmen. Mit der Loginfunktion könnte man während des Verlauf des Turniers die Tipps für die kommenden Spiele anpassen.
+### Fortlaufende Spiele
+Wie bereits in der Problemstellung beschrieben, sollte es möglich sein bereits am Anfang des Turniers zu tippen und nicht erst im Nachhinein. Man kennt ansonsten die Resultate von Beginn an ;)
+### Playoffs
+Anhand der eingetragenen effektiven Resultate der Spieler, könnte man automatisch das KO-System der Playoffs generieren lassen. So könnten die Nutzer ebenfalls auf die Finalspiele des Turniers tippen.
